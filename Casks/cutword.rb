@@ -1,6 +1,6 @@
 cask "cutword" do
-  version "1.0.0"
-  sha256 "b5a8b62a7f0dfce5fcde2c5280aba7911844fcd0924120fb149be5fae07488de"
+  version "1.1.0"
+  sha256 "8a3dd4044b0746be43f548f041ea9b920e2b541f4d1ab163113a5171a86c2134"
 
   url "https://github.com/wang-builds/cutword/releases/download/v#{version}/CutWord-#{version}-macos-arm64.dmg"
   name "CutWord"
@@ -9,6 +9,7 @@ cask "cutword" do
   homepage "https://github.com/wang-builds/cutword"
 
   depends_on arch: :arm64
+  depends_on macos: ">= :sonoma"
 
   app "CutWord.app"
   binary "#{appdir}/CutWord.app/Contents/MacOS/cutword"
